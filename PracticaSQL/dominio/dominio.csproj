@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{957AEA0E-40D3-42CC-AC71-B10C14EF53DC}</ProjectGuid>
+    <ProjectGuid>{EF9C9FDE-17D3-4DF7-B276-C313FDDA5B20}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>dominio</RootNamespace>
@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Elemento.cs" />
-    <Compile Include="Pokemon.cs" />
+    <Compile Include="Discos.cs" />
+    <Compile Include="Edicion.cs" />
+    <Compile Include="Estilos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

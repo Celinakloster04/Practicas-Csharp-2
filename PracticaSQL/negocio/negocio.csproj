@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D513C988-F9C0-416D-A62E-743F61F1DF54}</ProjectGuid>
+    <ProjectGuid>{F4414CB0-454A-4A2A-B869-7CDEC22E1A34}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>negocio</RootNamespace>
@@ -42,13 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
-    <Compile Include="ElementoNegocio.cs" />
-    <Compile Include="PokemonNegocio.cs" />
+    <Compile Include="DiscosNegocio.cs" />
+    <Compile Include="EstilosNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dominio\dominio.csproj">
-      <Project>{957aea0e-40d3-42cc-ac71-b10c14ef53dc}</Project>
+      <Project>{ef9c9fde-17d3-4df7-b276-c313fdda5b20}</Project>
       <Name>dominio</Name>
     </ProjectReference>
   </ItemGroup>

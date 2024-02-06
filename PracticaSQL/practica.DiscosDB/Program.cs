@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace winform_app
+namespace practica.DiscosDB
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace winform_app
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPokemon());
+            Application.Run(new frmDiscos());
         }
     }
 }

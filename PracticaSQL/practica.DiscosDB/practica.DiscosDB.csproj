@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FAA602F2-3095-4025-B958-9D3BC64132DD}</ProjectGuid>
+    <ProjectGuid>{55E5B0E0-92C0-44D0-8EF9-6A05E7F20BC8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>winform_app</RootNamespace>
-    <AssemblyName>winform-app</AssemblyName>
+    <RootNamespace>practica.DiscosDB</RootNamespace>
+    <AssemblyName>practica.DiscosDB</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,19 +52,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAltaPokemon.cs">
+    <Compile Include="frmAgregarDisco.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAltaPokemon.Designer.cs">
-      <DependentUpon>frmAltaPokemon.cs</DependentUpon>
+    <Compile Include="frmAgregarDisco.Designer.cs">
+      <DependentUpon>frmAgregarDisco.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAltaPokemon.resx">
-      <DependentUpon>frmAltaPokemon.cs</DependentUpon>
+    <EmbeddedResource Include="frmAgregarDisco.resx">
+      <DependentUpon>frmAgregarDisco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,11 +90,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dominio\dominio.csproj">
-      <Project>{957aea0e-40d3-42cc-ac71-b10c14ef53dc}</Project>
+      <Project>{ef9c9fde-17d3-4df7-b276-c313fdda5b20}</Project>
       <Name>dominio</Name>
     </ProjectReference>
     <ProjectReference Include="..\negocio\negocio.csproj">
-      <Project>{d513c988-f9c0-416d-a62e-743f61f1df54}</Project>
+      <Project>{f4414cb0-454a-4a2a-b869-7cdec22e1a34}</Project>
       <Name>negocio</Name>
     </ProjectReference>
   </ItemGroup>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace winform_app.Properties
+namespace practica.DiscosDB.Properties
 {
 
 
