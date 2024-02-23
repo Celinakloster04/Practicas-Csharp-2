@@ -33,7 +33,7 @@
             this.lblFechaLanzamiento = new System.Windows.Forms.Label();
             this.lblCantidadCanciones = new System.Windows.Forms.Label();
             this.lblUrlImagenTapa = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbxImagenDisco = new System.Windows.Forms.PictureBox();
             this.dtpFechaLanzamiento = new System.Windows.Forms.DateTimePicker();
             this.tbxArtista = new System.Windows.Forms.TextBox();
             this.tbxTitulo = new System.Windows.Forms.TextBox();
@@ -42,10 +42,10 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblEstilo = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboEstilo = new System.Windows.Forms.ComboBox();
             this.lblTipoEdicion = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.cboEdicion = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagenDisco)).BeginInit();
             this.SuspendLayout();
             // 
             // lblArtista
@@ -93,13 +93,15 @@
             this.lblUrlImagenTapa.TabIndex = 4;
             this.lblUrlImagenTapa.Text = "Url Imagen:";
             // 
-            // pictureBox1
+            // pbxImagenDisco
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(408, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(244, 230);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pbxImagenDisco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxImagenDisco.Location = new System.Drawing.Point(408, 32);
+            this.pbxImagenDisco.Name = "pbxImagenDisco";
+            this.pbxImagenDisco.Size = new System.Drawing.Size(244, 230);
+            this.pbxImagenDisco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxImagenDisco.TabIndex = 5;
+            this.pbxImagenDisco.TabStop = false;
             // 
             // dtpFechaLanzamiento
             // 
@@ -135,6 +137,7 @@
             this.tbxUrlImagenTapa.Name = "tbxUrlImagenTapa";
             this.tbxUrlImagenTapa.Size = new System.Drawing.Size(100, 22);
             this.tbxUrlImagenTapa.TabIndex = 10;
+            this.tbxUrlImagenTapa.Leave += new System.EventHandler(this.tbxUrlImagenTapa_Leave);
             // 
             // btnAceptar
             // 
@@ -144,6 +147,7 @@
             this.btnAceptar.TabIndex = 11;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -153,6 +157,7 @@
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblEstilo
             // 
@@ -163,13 +168,13 @@
             this.lblEstilo.TabIndex = 13;
             this.lblEstilo.Text = "Estilo:";
             // 
-            // comboBox1
+            // cboEstilo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(84, 178);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 14;
+            this.cboEstilo.FormattingEnabled = true;
+            this.cboEstilo.Location = new System.Drawing.Point(84, 178);
+            this.cboEstilo.Name = "cboEstilo";
+            this.cboEstilo.Size = new System.Drawing.Size(121, 24);
+            this.cboEstilo.TabIndex = 14;
             // 
             // lblTipoEdicion
             // 
@@ -180,22 +185,22 @@
             this.lblTipoEdicion.TabIndex = 15;
             this.lblTipoEdicion.Text = "Edición:";
             // 
-            // comboBox2
+            // cboEdicion
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(92, 207);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 16;
+            this.cboEdicion.FormattingEnabled = true;
+            this.cboEdicion.Location = new System.Drawing.Point(92, 207);
+            this.cboEdicion.Name = "cboEdicion";
+            this.cboEdicion.Size = new System.Drawing.Size(121, 24);
+            this.cboEdicion.TabIndex = 16;
             // 
             // frmAgregarDisco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 291);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cboEdicion);
             this.Controls.Add(this.lblTipoEdicion);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboEstilo);
             this.Controls.Add(this.lblEstilo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -204,7 +209,7 @@
             this.Controls.Add(this.tbxTitulo);
             this.Controls.Add(this.tbxArtista);
             this.Controls.Add(this.dtpFechaLanzamiento);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbxImagenDisco);
             this.Controls.Add(this.lblUrlImagenTapa);
             this.Controls.Add(this.lblCantidadCanciones);
             this.Controls.Add(this.lblFechaLanzamiento);
@@ -212,7 +217,8 @@
             this.Controls.Add(this.lblArtista);
             this.Name = "frmAgregarDisco";
             this.Text = "frmAgregarDisco";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.frmAgregarDisco_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagenDisco)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,7 +231,7 @@
         private System.Windows.Forms.Label lblFechaLanzamiento;
         private System.Windows.Forms.Label lblCantidadCanciones;
         private System.Windows.Forms.Label lblUrlImagenTapa;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxImagenDisco;
         private System.Windows.Forms.DateTimePicker dtpFechaLanzamiento;
         private System.Windows.Forms.TextBox tbxArtista;
         private System.Windows.Forms.TextBox tbxTitulo;
@@ -234,8 +240,8 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblEstilo;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboEstilo;
         private System.Windows.Forms.Label lblTipoEdicion;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboEdicion;
     }
 }

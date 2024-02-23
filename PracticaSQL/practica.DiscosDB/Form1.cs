@@ -22,12 +22,24 @@ namespace practica.DiscosDB
 
         private void frmDiscos_Load(object sender, EventArgs e)
         {
-            DiscosNegocio negocio = new DiscosNegocio();
-            listaDiscos = negocio.Listar();
-            dgvDiscos.DataSource = listaDiscos;
-            dgvDiscos.Columns["UrlImagenTapa"].Visible = false;
-            cargarImagen(listaDiscos[0].UrlImagenTapa);
+            cargar();
             
+        }
+        private void cargar()
+        {
+            DiscosNegocio negocio = new DiscosNegocio();
+            try
+            {
+                listaDiscos = negocio.listar();
+                dgvDiscos.DataSource = listaDiscos;
+                dgvDiscos.Columns["UrlImagenTapa"].Visible = false;
+                dgvDiscos.Columns["Id"].Visible = false;
+                cargarImagen(listaDiscos[0].UrlImagenTapa);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void dgvDiscos_SelectionChanged(object sender, EventArgs e)
@@ -35,6 +47,7 @@ namespace practica.DiscosDB
             Discos seleccionado = (Discos)dgvDiscos.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.UrlImagenTapa);
         }
+
         private void cargarImagen(string imagen)
         {
             try
@@ -45,6 +58,23 @@ namespace practica.DiscosDB
             {
                 pbDiscos.Load("https://editorial.unc.edu.ar/wp-content/uploads/sites/33/2022/09/placeholder.png");
             }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregarDisco alta = new frmAgregarDisco();
+            alta.ShowDialog();
+            cargar();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Discos seleccionado;
+            seleccionado = (Discos)dgvDiscos.CurrentRow.DataBoundItem;
+
+            frmAgregarDisco modificar = new frmAgregarDisco(seleccionado);
+            modificar.ShowDialog();
+            cargar();
         }
     }
 }
